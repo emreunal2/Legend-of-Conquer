@@ -66,8 +66,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: MovementY
     m_Mirror: 0
-  m_BlendParameter: lastX
-  m_BlendParameterY: lastY
+  m_BlendParameter: MovementX
+  m_BlendParameterY: MovementY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -82,6 +82,18 @@ AnimatorController:
   m_Name: Player
   serializedVersion: 5
   m_AnimatorParameters:
+  - m_Name: MovementY
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: MovementX
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   - m_Name: lastY
     m_Type: 1
     m_DefaultFloat: 0
@@ -199,8 +211,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: lastY
     m_Mirror: 0
-  m_BlendParameter: lastY
-  m_BlendParameterY: lastX
+  m_BlendParameter: lastX
+  m_BlendParameterY: lastY
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
