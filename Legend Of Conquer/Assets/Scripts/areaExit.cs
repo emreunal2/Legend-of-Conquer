@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class areaExit : MonoBehaviour
 {
+    [SerializeField] string transitionNameArea;
     [SerializeField] string sceneToLoad;
+    [SerializeField] areaEnter theAreaEnter;
     // Start is called before the first frame update
     void Start()
     {
-        
+        theAreaEnter.transitionAreaName = transitionNameArea;
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class areaExit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Player.instance.transitionName = transitionNameArea;
             SceneManager.LoadScene(sceneToLoad);
         }
 

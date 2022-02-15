@@ -425,7 +425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 558177804}
   playerAnimator: {fileID: 558177809}
-  moveSpeed: 10
+  moveSpeed: 20
+  transitionName: 
 --- !u!95 &558177809
 Animator:
   serializedVersion: 3
@@ -445,6 +446,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &876550810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1269113364, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+  m_PrefabInstance: {fileID: 5891214818648910777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea9ccfbc53577248b5cad84a71c7aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236212033
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236212033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.76, y: -5.3, z: -13.2563925}
+  m_LocalPosition: {x: -8.76, y: -5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -531,6 +543,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1269113364, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: transitionAreaName
+      value: Mountains-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269113365, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.23
+      objectReference: {fileID: 0}
     - target: {fileID: 5891214818179807769, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -545,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5891214818179807769, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.802763
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5891214818179807769, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -579,6 +599,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: areaExit
       objectReference: {fileID: 0}
+    - target: {fileID: 5891214818179807783, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: theAreaEnter
+      value: 
+      objectReference: {fileID: 876550810}
+    - target: {fileID: 5891214818179807783, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: transitionNameArea
+      value: Mountains-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
 --- !u!1001 &6669096779290113659
@@ -606,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6669096779353015982, guid: b814cba1d646dff4cbfb21ec0ce8ec2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.2563925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6669096779353015982, guid: b814cba1d646dff4cbfb21ec0ce8ec2f, type: 3}
       propertyPath: m_LocalRotation.w
