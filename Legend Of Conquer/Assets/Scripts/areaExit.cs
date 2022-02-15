@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class areaExit : MonoBehaviour
 {
+    [SerializeField] string sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class areaExit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("This player entered collision");
+            SceneManager.LoadScene(sceneToLoad);
         }
 
     }
