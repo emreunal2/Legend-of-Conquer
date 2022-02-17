@@ -4,6 +4,7 @@ Self Study, Unity 2D RPG Project
 ## TODO List
 - [X] Player Settings
 - [X] Scene Management
+- [X] Camera Management
 - [ ] Tilemaps
 - [ ] Dialogs
 - [ ] Player Stats
