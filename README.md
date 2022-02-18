@@ -5,7 +5,8 @@ Self Study, Unity 2D RPG Project
 - [X] Player Settings
 - [X] Scene Management
 - [X] Camera Management
-- [ ] Tilemaps
+- [X] Tilemaps
+- [ ] Level Management
 - [ ] Dialogs
 - [ ] Player Stats
 - [ ] Menu System
