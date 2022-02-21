@@ -31,8 +31,7 @@ public class Player : MonoBehaviour
 
 
         DontDestroyOnLoad(gameObject);
-        bottomLeftEdge = tilemap.localBounds.min;
-        topRightEdge = tilemap.localBounds.max;
+
     }
 
     // Update is called once per frame
@@ -65,5 +64,11 @@ public class Player : MonoBehaviour
             Mathf.Clamp(transform.position.y, bottomLeftEdge.y, topRightEdge.y),
             Mathf.Clamp(transform.position.z, bottomLeftEdge.z, topRightEdge.z)
             );
+    }
+    public void SetLimit(Vector3 bottomEdgeToSet, Vector3 topEdgeToSet)
+    {
+        bottomLeftEdge = bottomEdgeToSet;
+        topRightEdge = topEdgeToSet;
+
     }
 }

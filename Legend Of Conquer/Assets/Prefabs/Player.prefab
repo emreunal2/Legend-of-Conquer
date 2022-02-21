@@ -102,6 +102,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 159974471131374451}
   moveSpeed: 10
   transitionName: 
+  tilemap: {fileID: 0}
 --- !u!58 &159974471131374447
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,9 +116,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00788939, y: -0.018140793}
+  m_Offset: {x: -0.035795927, y: -0.018140793}
   serializedVersion: 2
-  m_Radius: 1.424252
+  m_Radius: 0.98705125
 --- !u!50 &159974471131374446
 Rigidbody2D:
   serializedVersion: 4
