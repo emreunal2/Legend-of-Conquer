@@ -25,6 +25,7 @@ public class areaExit : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Player.instance.transitionName = transitionNameArea;
+            MenuMenager.instance.FadeImage();
             SceneManager.LoadScene(sceneToLoad);
         }
 
