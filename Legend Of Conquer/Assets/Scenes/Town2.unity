@@ -273,8 +273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
+  - '#Healer'
   - Test1
-  - test2
+  - 3421
+  - '#Demon'
   - TESSSSST3
   - lorem lipsum
 --- !u!1 &284886037 stripped
@@ -450,6 +452,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+--- !u!1 &387586409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159974471131374441, guid: 16ff6e879ada9ad4a80509bd9adecaff, type: 3}
+  m_PrefabInstance: {fileID: 1691442215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &387586410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387586409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abed4ac5c5ec42468c46c66a073131a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Emre
+  playerLevel: 1
+  currentXP: 20
+  maxHP: 100
+  currentHP: 50
+  maxMana: 30
+  currentMana: 30
+  dexterity: 10
+  defence: 10
 --- !u!1 &559077236
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,8 +802,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -692.581, y: 213.21732}
-  m_SizeDelta: {x: -1437.984, y: -234.39502}
+  m_AnchoredPosition: {x: -688.285, y: 172.39}
+  m_SizeDelta: {x: -1429.391, y: -152.74}
   m_Pivot: {x: 0.49999982, y: 0.5000005}
 --- !u!114 &1571577803
 MonoBehaviour:
