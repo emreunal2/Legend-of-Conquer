@@ -51,6 +51,19 @@ public class PlayerStats : MonoBehaviour
         {
             currentXP -= neededXP[playerLevel];
             playerLevel++;
+            maxHP = Mathf.FloorToInt(maxHP * 1.06f);
+            currentHP = maxHP;
+
+            maxMana = Mathf.FloorToInt(maxMana * 1.06f);
+            currentMana= maxMana;
+            if (playerLevel % 2==0)
+            {
+                dexterity++;
+            }
+            else
+            {
+                defence++;
+            }
         }
 
     }
