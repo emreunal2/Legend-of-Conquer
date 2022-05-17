@@ -8,8 +8,8 @@ Self Study, Unity 2D RPG Project
 - [X] Tilemaps
 - [X] Level Management
 - [X] Dialogs
-- [ ] Player Stats
-- [ ] Menu System
+- [X] Player Stats
+- [X] Menu System
 - [ ] Inventory System
 - [ ] Shop & Money System
 - [ ] Questing System
