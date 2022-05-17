@@ -15,6 +15,8 @@ public class MenuMenager : MonoBehaviour
     [SerializeField] Slider[] xpSlider;
     [SerializeField] Image[] characterImage;
     [SerializeField] GameObject[] characterPanel;
+    [SerializeField] GameObject[] statsButtons;
+    [SerializeField] TextMeshProUGUI nameStats, hpStats, manaStats, dextarityStats, defenceStats;
 
 
     void Start()
@@ -66,5 +68,25 @@ public class MenuMenager : MonoBehaviour
     {
         imageToFade.GetComponent<Animator>().SetTrigger("Start Fading");
 
+    }
+
+    public void StatsMenu()
+    {
+        for(int i = 0; i < playerStats.Length; i++)
+        {
+            statsButtons[i].SetActive(true);
+            statsButtons[i].GetComponentInChildren<Text>().text = playerStats[i]._playerName;
+        }
+        StatsMenuUpdate(0);
+    }
+
+    public void StatsMenuUpdate(int playerSelectedNumber)
+    {
+        PlayerStats playerSelected = playerStats[playerSelectedNumber];
+        nameStats.text = playerSelected._playerName.ToString();
+        hpStats.text = playerSelected._currentHP.ToString() + "/" + playerSelected._maxHP.ToString();
+        manaStats.text = playerSelected._currentHP.ToString() + "/" + playerSelected._maxHP.ToString();
+        dextarityStats.text = playerSelected._dexterity.ToString();
+        defenceStats.text = playerSelected._defence.ToString();
     }
 }

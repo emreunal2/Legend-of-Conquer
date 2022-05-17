@@ -53,6 +53,15 @@ public class PlayerStats : MonoBehaviour
     {
         get { return neededXP; }
     }
+    public int _dexterity
+    {
+        get { return dexterity; }
+    }
+    public int _defence
+    {
+        get { return defence; }
+    }
+
 
 
 
