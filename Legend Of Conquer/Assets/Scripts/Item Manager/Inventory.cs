@@ -21,7 +21,28 @@ public class Inventory : MonoBehaviour
 
     public void AddItems(ItemManager item)
     {
-        itemsList.Add(item);
+        if (item.isStackable)
+        {
+            bool isItemExits = false;
+            foreach (ItemManager i in itemsList)
+            {
+
+                if (i.itemName == item.itemName)
+                {
+                    i.amount += item.amount;
+                    isItemExits = true;
+                }
+
+            }
+            if (!isItemExits)
+            {
+                itemsList.Add(item);
+            }
+        }
+        else
+        {
+            itemsList.Add(item);
+        }
     }
     public List<ItemManager> GetItemsList()
     {

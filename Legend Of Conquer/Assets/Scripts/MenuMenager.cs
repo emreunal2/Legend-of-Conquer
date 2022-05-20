@@ -103,7 +103,13 @@ public class MenuMenager : MonoBehaviour
         {
             RectTransform itemSlot = Instantiate(itemSlotContainer, itemSlotContainerParent).GetComponent<RectTransform>();
             Image itemImage = itemSlot.Find("Item Image").GetComponent<Image>();
+            Text itemText = itemSlot.Find("Text").GetComponent<Text>();
             itemImage.sprite = item.itemsImage;
+            if (item.amount > 1)
+            {
+                itemText.text = item.amount.ToString();
+            }
+            else { itemText.text = ""; }
         }
     }
 
