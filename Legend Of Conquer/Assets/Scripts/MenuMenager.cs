@@ -18,6 +18,9 @@ public class MenuMenager : MonoBehaviour
     [SerializeField] GameObject[] statsButtons;
     [SerializeField] TextMeshProUGUI nameStats, hpStats, manaStats, dextarityStats, defenceStats;
 
+    [SerializeField] GameObject itemSlotContainer;
+    [SerializeField] Transform itemSlotContainerParent;
+
 
     void Start()
     {
@@ -54,7 +57,6 @@ public class MenuMenager : MonoBehaviour
             xpSlider[i].maxValue = playerStats[i]._neededXP[playerStats[i]._playerLevel];
             xpSlider[i].value = playerStats[i]._currentXP;
             xpText[i].text = playerStats[i]._currentXP.ToString() + "/" + playerStats[i]._neededXP[playerStats[i]._playerLevel].ToString();
-            print(playerStats[i]._neededXP[playerStats[i]._playerLevel]);
             characterPanel[i].SetActive(true);
         }
     }
@@ -89,4 +91,21 @@ public class MenuMenager : MonoBehaviour
         dextarityStats.text = playerSelected._dexterity.ToString();
         defenceStats.text = playerSelected._defence.ToString();
     }
+
+    public void UpdateItemsInventory()
+    {
+        foreach(Transform itemSlot in itemSlotContainerParent)
+        {
+            Destroy(itemSlot.gameObject);
+        }
+
+        foreach (ItemManager item in Inventory.instance.GetItemsList())
+        {
+            RectTransform itemSlot = Instantiate(itemSlotContainer, itemSlotContainerParent).GetComponent<RectTransform>();
+            Image itemImage = itemSlot.Find("Item Image").GetComponent<Image>();
+            itemImage.sprite = item.itemsImage;
+        }
+    }
+
+
 }
