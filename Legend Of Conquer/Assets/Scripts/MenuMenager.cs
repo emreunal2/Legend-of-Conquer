@@ -20,7 +20,9 @@ public class MenuMenager : MonoBehaviour
 
     [SerializeField] GameObject itemSlotContainer;
     [SerializeField] Transform itemSlotContainerParent;
+    public TextMeshProUGUI itemName, itemDescription;
 
+    public ItemManager activeItem;
 
     void Start()
     {
@@ -110,8 +112,15 @@ public class MenuMenager : MonoBehaviour
                 itemText.text = item.amount.ToString();
             }
             else { itemText.text = ""; }
+
+            itemSlot.GetComponent<ItemButton>().itemOnButton = item;
         }
     }
 
+    public void DiscardItem()
+    {
+        print(activeItem.itemName);
+        Inventory.instance.RemoveItem(activeItem);
 
+    }
 }

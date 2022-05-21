@@ -44,6 +44,33 @@ public class Inventory : MonoBehaviour
             itemsList.Add(item);
         }
     }
+
+    public void RemoveItem(ItemManager item)
+    {
+        if (item.isStackable)
+        {
+            ItemManager inventoryItem = null;
+
+            foreach(ItemManager i in itemsList)
+            {
+                if(i.itemName == item.itemName)
+                {
+                    i.amount--;
+                    inventoryItem = i;
+                }
+            }
+            if(inventoryItem != null && inventoryItem.amount <= 0)
+            {
+                itemsList.Remove(inventoryItem);
+            }
+            
+        }
+        else
+        {
+            itemsList.Remove(item);
+        }
+        MenuMenager.instance.UpdateItemsInventory();
+    }
     public List<ItemManager> GetItemsList()
     {
         return itemsList;
