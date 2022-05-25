@@ -12,6 +12,7 @@ public class ItemManager : MonoBehaviour
     public Sprite itemsImage;
 
     public enum AffectType { HP, Mana };
+    public int ammountOfEffect;
     public AffectType affectType;
 
     public int weaponDexterity;
@@ -20,15 +21,20 @@ public class ItemManager : MonoBehaviour
     public bool isStackable;
     public int amount;
 
-    void Start()
+    public void UseItem(int charToUseON)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        PlayerStats selectedPlayer = GameManager.instance.GetPlayerStats()[charToUseON];
+        if(itemType == ItemType.Item)
+        {
+            if (affectType == AffectType.HP)
+            {
+                selectedPlayer.AddHP(ammountOfEffect);
+            }
+            else if (affectType == AffectType.Mana)
+            {
+                selectedPlayer.AddMana(ammountOfEffect);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
