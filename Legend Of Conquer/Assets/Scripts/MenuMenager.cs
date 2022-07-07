@@ -17,6 +17,7 @@ public class MenuMenager : MonoBehaviour
     [SerializeField] GameObject[] characterPanel;
     [SerializeField] GameObject[] statsButtons;
     [SerializeField] TextMeshProUGUI nameStats, hpStats, manaStats, dextarityStats, defenceStats;
+    [SerializeField] TextMeshProUGUI equipedWeapon, equipedArmor, weaponPower, armorDefence;
 
     [SerializeField] GameObject itemSlotContainer;
     [SerializeField] Transform itemSlotContainerParent;
@@ -95,6 +96,11 @@ public class MenuMenager : MonoBehaviour
         manaStats.text = playerSelected._currentHP.ToString() + "/" + playerSelected._maxHP.ToString();
         dextarityStats.text = playerSelected._dexterity.ToString();
         defenceStats.text = playerSelected._defence.ToString();
+
+        equipedWeapon.text = playerSelected.equippedWeaponName.ToString();
+        equipedArmor.text = playerSelected.equippedArmorName.ToString();
+        weaponPower.text = playerSelected.weaponDex.ToString();
+        armorDefence.text = playerSelected.armorDef.ToString();
     }
 
     public void UpdateItemsInventory()

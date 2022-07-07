@@ -22,6 +22,12 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int dexterity;
     [SerializeField] int defence;
 
+    public string equippedWeaponName;
+    public string equippedArmorName;
+
+    public int weaponDex;
+    public int armorDef;
+
     public string _playerName{
        get {return playerName;}
     }
@@ -62,6 +68,7 @@ public class PlayerStats : MonoBehaviour
         get { return defence; }
     }
 
+    public ItemManager equipedArmor, equipedWeapon;
 
 
 
@@ -130,5 +137,18 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void EquipWeapon(ItemManager weaponToEquip)
+    {
+        equipedWeapon = weaponToEquip;
+        equippedWeaponName = weaponToEquip.itemName;
+        weaponDex = weaponToEquip.weaponDexterity;
+    }
+
+    public void EquipArmor(ItemManager armorToEquip)
+    {
+        equipedArmor = armorToEquip;
+        equippedArmorName = armorToEquip.itemName;
+        armorDef = armorToEquip.armorDefence;
+    }
 
 }

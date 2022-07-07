@@ -6,7 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField] PlayerStats[] playerStats;
-    public bool gameMenuOpened, dialogBoxOpened;
+    public bool gameMenuOpened, dialogBoxOpened, shopMenuOpened;
+    public int currentCoin;
+
     void Start()
     {
         if (instance != null && instance != this)
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameMenuOpened || dialogBoxOpened)
+        if(gameMenuOpened || dialogBoxOpened || shopMenuOpened)
         {
             Player.instance.deactivatedMovement = true;
         }
