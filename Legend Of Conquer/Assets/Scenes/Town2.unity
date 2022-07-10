@@ -184,14 +184,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6890f13820fc9c4468e6ad63e878f736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
-  itemName: 'Sword '
+  itemType: 1
+  itemName: Aycin
   itemDescription: eeee
   value: 0
   itemsImage: {fileID: 21300000, guid: 4e8e2777ed8ff3d419359f4c0671a591, type: 3}
   ammountOfEffect: 0
   affectType: 0
-  weaponDexterity: 0
+  weaponDexterity: 50
   armorDefence: 0
   isStackable: 0
   amount: 1
@@ -1064,14 +1064,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6890f13820fc9c4468e6ad63e878f736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 1
   itemName: 'Sword '
   itemDescription: tttt
   value: 0
   itemsImage: {fileID: 21300000, guid: 4e8e2777ed8ff3d419359f4c0671a591, type: 3}
   ammountOfEffect: 0
   affectType: 0
-  weaponDexterity: 0
+  weaponDexterity: 50
   armorDefence: 0
   isStackable: 0
   amount: 1
