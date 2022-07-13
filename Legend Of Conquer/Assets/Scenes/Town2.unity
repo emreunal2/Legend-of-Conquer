@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2067929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1592628972556545987, guid: 30cd82d97d86966449f60df54b274680, type: 3}
+  m_PrefabInstance: {fileID: 1592628973221658188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2067933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3adce483100d5544a4f05421d54bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNames:
+  - 
+  - Defeat Dragon
+  - Enter Cave
+  - Steal The Gem
+  - Take Monster Soul
+  questMarkers: 
 --- !u!1 &15404888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1354,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1827671669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7757383269064422318, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+  m_PrefabInstance: {fileID: 7757383268832989602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfcbb7094ef82449a0104a98342c3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1848332813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1646,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1827671669}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuMenager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 473733575, guid: 971e83d3e143e9f4783429445844383e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1982929137, guid: 971e83d3e143e9f4783429445844383e, type: 3}
       propertyPath: m_IsActive
       value: 0

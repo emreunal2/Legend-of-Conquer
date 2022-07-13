@@ -153,4 +153,10 @@ public class MenuMenager : MonoBehaviour
     {
         characterChoicePanel.SetActive(false);
     }
+
+    public void QuitMenu()
+    {
+        menu.SetActive(false);
+        GameManager.instance.gameMenuOpened = false;
+    }
 }
