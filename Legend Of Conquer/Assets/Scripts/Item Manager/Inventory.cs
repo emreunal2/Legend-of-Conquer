@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItems(ItemManager item)
     {
+        AudioManager.instance.PlaySFX(5);
         if (item.isStackable)
         {
             bool isItemExits = false;
@@ -47,6 +48,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(ItemManager item)
     {
+        AudioManager.instance.PlaySFX(3);
         if (item.isStackable)
         {
             ItemManager inventoryItem = null;
