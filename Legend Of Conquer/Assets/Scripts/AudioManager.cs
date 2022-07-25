@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic(int soundToPlay)
     {
         StopMusic();
+
         if (soundToPlay < backgroundMusic.Length)
         {
             backgroundMusic[soundToPlay].Play();
