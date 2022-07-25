@@ -2383,6 +2383,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d27313d782d9045b7af740f10e93d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SFX:
+  - {fileID: 2146489536}
+  - {fileID: 501178331}
+  - {fileID: 771598834}
+  - {fileID: 764364997}
+  - {fileID: 1101940980}
+  - {fileID: 947016062}
+  - {fileID: 1861600674}
+  - {fileID: 1188387629}
+  - {fileID: 2014929512}
+  backgroundMusic:
+  - {fileID: 469042360}
+  - {fileID: 1367435497}
+  - {fileID: 770105361}
+  - {fileID: 502283163}
+  - {fileID: 886129187}
+  - {fileID: 37727253}
+  - {fileID: 1278789301}
 --- !u!4 &1255935196
 Transform:
   m_ObjectHideFlags: 0
