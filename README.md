@@ -10,11 +10,11 @@ Self Study, Unity 2D RPG Project
 - [X] Dialogs
 - [X] Player Stats
 - [X] Menu System
-- [ ] Inventory System
-- [ ] Shop & Money System
-- [ ] Questing System
-- [ ] Save & Load System
-- [ ] Music & SFX
+- [X] Inventory System
+- [X] Shop & Money System
+- [X] Questing System
+- [X] Save & Load System
+- [X] Music & SFX
 - [ ] Main Menu
 - [ ] Battle System
 - [ ] Enemy Attack System

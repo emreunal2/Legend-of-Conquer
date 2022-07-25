@@ -93,5 +93,18 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.GetFloat("Player_Pos_Y"),
             PlayerPrefs.GetFloat("Player_Pos_Z")
             );
+
+        for(int i=0; i < playerStats.Length; i++)
+        {
+            if (PlayerPrefs.GetInt("Player_" + playerStats[i]._playerName + "_active") == 0)
+            {
+                playerStats[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                playerStats[i].gameObject.SetActive(true);
+            }
+
+        }
     }
 }
