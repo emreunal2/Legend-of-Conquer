@@ -16,7 +16,17 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("Saved");
+            SaveQuestData();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log("Loaded");
+            LoadQuestData();
+        }
     }
 
     public int GetQuestNumber(string questToFind)
