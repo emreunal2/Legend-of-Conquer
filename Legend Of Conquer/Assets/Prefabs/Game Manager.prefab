@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1592628972556546013}
   - component: {fileID: 1592628972556546012}
   - component: {fileID: 1592628972556546014}
+  - component: {fileID: 2067933}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -47,6 +48,8 @@ MonoBehaviour:
   playerStats: []
   gameMenuOpened: 0
   dialogBoxOpened: 0
+  shopMenuOpened: 0
+  currentCoin: 0
 --- !u!114 &1592628972556546014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +62,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c0f2a2ec795fd48ac6f63f5438a43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2067933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592628972556545987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3adce483100d5544a4f05421d54bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questNames:
+  - 
+  - Defeat Dragon
+  - Enter Cave
+  - Steal The Gem
+  - Take Monster Soul
+  questMarkers: 
