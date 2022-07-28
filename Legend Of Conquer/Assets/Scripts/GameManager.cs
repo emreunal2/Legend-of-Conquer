@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
             Player.instance.deactivatedMovement = true;
         }
 
+        else
+        {
+            Player.instance.deactivatedMovement = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("Saved");
@@ -43,10 +48,6 @@ public class GameManager : MonoBehaviour
             LoadData();
         }
 
-        else
-        {
-            Player.instance.deactivatedMovement = false;
-        }
     }
 
     public PlayerStats[] GetPlayerStats()

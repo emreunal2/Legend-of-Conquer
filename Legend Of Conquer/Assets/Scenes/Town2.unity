@@ -1246,6 +1246,10 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 757578895}
+    - target: {fileID: 159974471131374450, guid: 16ff6e879ada9ad4a80509bd9adecaff, type: 3}
+      propertyPath: deactivatedMovement
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16ff6e879ada9ad4a80509bd9adecaff, type: 3}
 --- !u!1 &1706097253
