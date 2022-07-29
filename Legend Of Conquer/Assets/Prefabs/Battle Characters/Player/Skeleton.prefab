@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19663d364b132842973fe241827df12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   attacksAvailable: []
   characterName: Skeleton
   currentHp: 150

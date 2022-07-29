@@ -21,4 +21,9 @@ public class BattleCharacters : MonoBehaviour
     {
         
     }
+
+    public bool IsPlayer()
+    {
+        return isPlayer;
+    }
 }
