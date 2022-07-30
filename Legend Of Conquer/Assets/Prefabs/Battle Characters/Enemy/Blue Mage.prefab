@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  attacksAvailable: []
+  attacksAvailable:
+  - FireBall
   characterName: Blue Mage
   currentHp: 50
   maxHp: 50

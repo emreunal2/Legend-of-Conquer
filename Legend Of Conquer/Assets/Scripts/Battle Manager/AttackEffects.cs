@@ -6,15 +6,20 @@ public class AttackEffects : MonoBehaviour
 {
     [SerializeField] float effectTime;
     [SerializeField] int SFXNumber;
+    [SerializeField] bool isSFXPlayed;
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.PlaySFX(SFXNumber);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isSFXPlayed) {
+            AudioManager.instance.PlaySFX(SFXNumber);
+            isSFXPlayed = true;
+        }
         Destroy(gameObject, effectTime);
     }
 }

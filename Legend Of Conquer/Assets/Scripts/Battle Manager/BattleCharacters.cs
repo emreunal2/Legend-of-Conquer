@@ -26,4 +26,9 @@ public class BattleCharacters : MonoBehaviour
     {
         return isPlayer;
     }
+
+    public string[] AttackMovesAvailable()
+    {
+        return attacksAvailable;
+    }
 }

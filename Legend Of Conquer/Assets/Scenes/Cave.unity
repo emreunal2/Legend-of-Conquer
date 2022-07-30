@@ -748,6 +748,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aba0b2745ced9c4f8dcddc953aab7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleMovesList:
+  - moveName: FireBall
+    movePower: 20
+    manaCost: 10
+    moveEffect: {fileID: 1861531639164971545, guid: afe825e05edf1d64dab75b3fd6cb6581, type: 3}
+  - moveName: Slash
+    movePower: 15
+    manaCost: 0
+    moveEffect: {fileID: 5060924198732211187, guid: 9c8c26ff4bec7174a89be022da135010, type: 3}
+  - moveName: Tentacle
+    movePower: 50
+    manaCost: 10
+    moveEffect: {fileID: 654930485769096462, guid: a6bc8b4c6413ba34e861e6d2df8d1752, type: 3}
   battleScene: {fileID: 966691071}
   activeCharacters: []
   playerPositions:
@@ -2339,6 +2352,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 488879533601539363, guid: 8d40e1d6067f52243948f9548a028a8d, type: 3}
+      propertyPath: m_Volume
+      value: 0.045
+      objectReference: {fileID: 0}
     - target: {fileID: 488879533641142090, guid: 8d40e1d6067f52243948f9548a028a8d, type: 3}
       propertyPath: m_RootOrder
       value: 1

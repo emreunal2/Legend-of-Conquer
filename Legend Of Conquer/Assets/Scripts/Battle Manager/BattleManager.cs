@@ -7,6 +7,7 @@ public class BattleManager : MonoBehaviour
     public static BattleManager instance;
     private bool isBattleActive;
 
+    [SerializeField] BattleMoves[] battleMovesList;
     [SerializeField] GameObject battleScene;
     [SerializeField] List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
 
@@ -16,6 +17,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] int currentTurn;
     [SerializeField] bool waitingForTurn;
     [SerializeField] GameObject UIButtonHolder;
+
     void Start()
     {
         instance = this;
@@ -209,5 +211,18 @@ public class BattleManager : MonoBehaviour
         }
 
         int selectedPlayerToAttack = players[Random.Range(0, players.Count)];
+        int selectedAttack = Random.Range(0, activeCharacters[currentTurn].AttackMovesAvailable().Length);
+
+        for(int i=0; i < battleMovesList.Length; i++)
+        {
+           
+            if (battleMovesList[i].moveName == activeCharacters[currentTurn].AttackMovesAvailable()[selectedAttack])
+            {       
+                Instantiate(
+                    battleMovesList[i].moveEffect,
+                    activeCharacters[selectedPlayerToAttack].transform.position,
+                    activeCharacters[selectedPlayerToAttack].transform.rotation);
+            }
+        }
     }
 }
