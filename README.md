@@ -15,8 +15,8 @@ Self Study, Unity 2D RPG Project
 - [X] Questing System
 - [X] Save & Load System
 - [X] Music & SFX
-- [ ] Main Menu
-- [ ] Battle System
-- [ ] Enemy Attack System
+- [X] Main Menu
+- [X] Battle System
+- [X] Enemy Attack System
 - [ ] Player Attack System
 - [ ] Battle System Ending
