@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BattleManager : MonoBehaviour
 {
@@ -12,11 +14,19 @@ public class BattleManager : MonoBehaviour
     [SerializeField] List<BattleCharacters> activeCharacters = new List<BattleCharacters>();
 
     [SerializeField] Transform[] playerPositions, enemyPositions;
+    [SerializeField] ParticleSystem attackEffect;
     [SerializeField] BattleCharacters[] playerPrefabs, enemiesPrefabs;
 
     [SerializeField] int currentTurn;
     [SerializeField] bool waitingForTurn;
     [SerializeField] GameObject UIButtonHolder;
+
+    [SerializeField] TextMeshProUGUI[] playersNameText;
+    [SerializeField] Slider[] PlayerHealthSlider, PlayerManaSlider;
+    [SerializeField] GameObject[] players;
+
+    [SerializeField] GameObject enemyTargetPanel;
+    [SerializeField] BattleTargetButtons[] targetButtons;
 
     void Start()
     {
@@ -61,6 +71,7 @@ public class BattleManager : MonoBehaviour
 
             waitingForTurn = true;
             currentTurn = 0;
+            UpdateStats();
         }
     }
 
@@ -142,6 +153,7 @@ public class BattleManager : MonoBehaviour
         }
         waitingForTurn = true;
         UpdateBattle();
+        UpdateStats();
     }
 
     private void UpdateBattle()
@@ -186,6 +198,18 @@ public class BattleManager : MonoBehaviour
             isBattleActive = false;
         }
 
+        else
+        {
+            while (activeCharacters[currentTurn].currentHp <= 0)
+            {
+                currentTurn++;
+                if (currentTurn >= activeCharacters.Count)
+                {
+                    currentTurn++;
+                }
+            }
+        }
+
     }
 
     public IEnumerator EnemyMoveCoroutine()
@@ -212,16 +236,121 @@ public class BattleManager : MonoBehaviour
 
         int selectedPlayerToAttack = players[Random.Range(0, players.Count)];
         int selectedAttack = Random.Range(0, activeCharacters[currentTurn].AttackMovesAvailable().Length);
+        int movePower = 0;
 
         for(int i=0; i < battleMovesList.Length; i++)
         {
            
             if (battleMovesList[i].moveName == activeCharacters[currentTurn].AttackMovesAvailable()[selectedAttack])
-            {       
-                Instantiate(
-                    battleMovesList[i].moveEffect,
-                    activeCharacters[selectedPlayerToAttack].transform.position,
-                    activeCharacters[selectedPlayerToAttack].transform.rotation);
+            {
+                movePower = PlayMove(selectedPlayerToAttack, i);
+            }
+
+        }
+        DealDamage(selectedPlayerToAttack, movePower);
+
+        UpdateStats();
+    }
+
+    private int PlayMove(int selectedPlayerToAttack, int i)
+    {
+        int movePower;
+        Instantiate(
+               battleMovesList[i].moveEffect,
+               activeCharacters[selectedPlayerToAttack].transform.position,
+               activeCharacters[selectedPlayerToAttack].transform.rotation);
+
+        Instantiate(
+            attackEffect,
+            activeCharacters[currentTurn].transform.position,
+            activeCharacters[currentTurn].transform.rotation
+            );
+
+        movePower = battleMovesList[i].movePower;
+        return movePower;
+    }
+
+    private void DealDamage(int selectedCharacter, int movePower)
+    {
+        float attackPower = activeCharacters[currentTurn].dexterity + activeCharacters[currentTurn].wpnPower;
+        float defencePower = activeCharacters[selectedCharacter].defence + activeCharacters[selectedCharacter].armorDefence;
+
+        float damageAmount = (attackPower / defencePower) * movePower * Random.Range(0.9f, 1.1f);
+
+        activeCharacters[selectedCharacter].TakeDamage((int)damageAmount);
+    }
+
+    public void UpdateStats()
+    {
+        for(int i=0; i < playersNameText.Length; i++)
+        {
+            if (activeCharacters.Count > i)
+            {
+                if (activeCharacters[i].IsPlayer())
+                {
+                    BattleCharacters playerData = activeCharacters[i];
+
+                    playersNameText[i].text = playerData.characterName;
+
+                    PlayerHealthSlider[i].maxValue = playerData.maxHp;
+                    PlayerHealthSlider[i].value = playerData.currentHp;
+
+                    PlayerManaSlider[i].maxValue = playerData.maxMana;
+                    PlayerHealthSlider[i].value = playerData.currentMana;
+
+                }
+                else
+                {
+                    players[i].gameObject.SetActive(false);
+                }
+
+            }
+            else
+            {
+                players[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    //player attacking methods
+
+    public void PlayerAttack(string moveName, int targetEnemy)
+    {
+        // int targetEnemy = 3;
+        int movePower = 0;
+
+        for(int i=0; i < battleMovesList.Length; i++)
+        {
+            if (battleMovesList[i].moveName == moveName)
+            {
+                movePower = PlayMove(targetEnemy, i);
+            }
+        }
+        DealDamage(targetEnemy, movePower);
+        NextTurn();
+        enemyTargetPanel.SetActive(false);
+    }
+
+    public void OpenTargetMenu(string moveName)
+    {
+        enemyTargetPanel.SetActive(true);
+        List<int> Enemies = new List<int>();
+        for(int i = 0; i<activeCharacters.Count; i++) 
+        {
+            if (!activeCharacters[i].IsPlayer())
+            {
+                Enemies.Add(i);
+            }
+        }
+
+        for(int i = 0; i < targetButtons.Length; i++)
+        {
+            if (Enemies.Count > i)
+            {
+                targetButtons[i].gameObject.SetActive(true);
+                targetButtons[i].moveName = moveName;
+                targetButtons[i].activeBattleTarget = Enemies[i];
+                targetButtons[i].targetName.text = activeCharacters[Enemies[i]].characterName;
             }
         }
     }

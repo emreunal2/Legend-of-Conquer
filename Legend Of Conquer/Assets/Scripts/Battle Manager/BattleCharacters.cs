@@ -31,4 +31,13 @@ public class BattleCharacters : MonoBehaviour
     {
         return attacksAvailable;
     }
+
+    public void TakeDamage(int damageToRecieve)
+    {
+        currentHp -= damageToRecieve;
+        if (currentHp < 0)
+        {
+            currentHp = 0;
+        }
+    }
 }
