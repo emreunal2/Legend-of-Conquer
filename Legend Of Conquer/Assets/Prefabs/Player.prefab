@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -211739807
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5183574429699489216, guid: 1193e2267f892804c9652446cb0fb163, type: 3}
+  m_Sprite: {fileID: 4518083373202083987, guid: ee47f684d70879e41a09bd1b5c54a793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -179,9 +179,9 @@ MonoBehaviour:
   currentXP: 20
   neededXP: 
   maxHP: 100
-  currentHP: 50
+  currentHP: 100
   maxMana: 30
-  currentMana: 30
+  currentMana: 15
   dexterity: 10
   defence: 10
   equippedWeaponName: 

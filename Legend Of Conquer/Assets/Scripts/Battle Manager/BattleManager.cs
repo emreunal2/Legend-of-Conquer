@@ -29,6 +29,9 @@ public class BattleManager : MonoBehaviour
     public GameObject magicChoicePanel;
     [SerializeField] BattleTargetButtons[] targetButtons;
     [SerializeField] BattleMovesButton[] magicButtons;
+    
+    [SerializeField] float changeToRun = 0.5f;
+    [SerializeField] BattleNotification battleNotice;
 
     void Start()
     {
@@ -378,11 +381,30 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                magicButtons[i].gameObject.SetActive(false);
+            }
         }
     }
 
     public BattleCharacters GetActiveCharacter()
     {
         return activeCharacters[currentTurn];
+    }
+
+    public void RunAway()
+    {
+        if(Random.value > changeToRun)
+        {
+            isBattleActive = false;
+            battleScene.SetActive(false);
+        }
+        else
+        {
+            NextTurn();
+            battleNotice.SetText("There is no Escape");
+            battleNotice.Activate();
+        }
     }
 }
