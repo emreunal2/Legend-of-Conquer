@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Town.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mountains.unity
     guid: 34bb4503cade7f94cb15772578ba2c15
   - enabled: 1
@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mountains2.unity
     guid: 09176318049746744975a029614c233c
+  - enabled: 1
+    path: Assets/Scenes/NewGameArea.unity
+    guid: fbd0c86a0cda08945973dd4e4dcb053e
+  - enabled: 1
+    path: Assets/Scenes/CaveEntrence.unity
+    guid: a6b9494de52a68445ae6923c884e6781
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: 1356eb3f55004b941820bf6fdf89b228
   m_configObjects: {}

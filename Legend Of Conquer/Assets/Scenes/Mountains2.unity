@@ -132,7 +132,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1269113364, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: transitionAreaName
-      value: Mountains-2
+      value: test-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269113365, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269113365, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.47
       objectReference: {fileID: 0}
     - target: {fileID: 5891214818179807769, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: m_RootOrder
@@ -188,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5891214818179807783, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
       propertyPath: transitionNameArea
-      value: Mountains-2
+      value: test-2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2891da60ef3b3a644a9463da2dc1f1c6, type: 3}
@@ -251,6 +259,14 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 7570522046955452713}
+    - target: {fileID: 8374820992479317270, guid: ab055092bfc0fd0429a0c8a9b5d37933, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2850664
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374820992479317270, guid: ab055092bfc0fd0429a0c8a9b5d37933, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7647059
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab055092bfc0fd0429a0c8a9b5d37933, type: 3}
 --- !u!1001 &1744979903
